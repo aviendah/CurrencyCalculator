@@ -124,7 +124,7 @@
                                         </buttonConfiguration>
                                         <connections>
                                             <action selector="convert:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aWP-h9-ucf"/>
-                                            <segue destination="Gpm-NI-1OH" kind="presentation" identifier="toAmounts" id="Puq-xB-Cs5"/>
+                                            <segue destination="Gpm-NI-1OH" kind="presentation" identifier="toConvertedAmounts" id="Puq-xB-Cs5"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -148,15 +148,15 @@
             </objects>
             <point key="canvasLocation" x="95" y="-27"/>
         </scene>
-        <!--View Controller-->
+        <!--Converted Amount View-->
         <scene sceneID="uYJ-B1-8hq">
             <objects>
-                <viewController id="Gpm-NI-1OH" sceneMemberID="viewController">
+                <viewController id="Gpm-NI-1OH" customClass="ConvertedAmountView" customModule="CurrencyConverter" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Y06-RQ-XNN">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Amount in USD " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ba5-Hb-t2F">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Amount in USD " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ba5-Hb-t2F">
                                 <rect key="frame" x="30" y="100" width="333" height="37"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="31"/>
                                 <color key="textColor" red="0.95482117659999999" green="0.73964866259999995" blue="0.65902312399999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -249,6 +249,17 @@
                             <constraint firstItem="ba5-Hb-t2F" firstAttribute="centerX" secondItem="Y06-RQ-XNN" secondAttribute="centerX" id="vAX-We-Wan"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="canadianLabel" destination="EpP-0d-lbK" id="85W-Sl-WKr"/>
+                        <outlet property="cdTitleLabel" destination="3B0-EB-Y6z" id="7YN-0W-DDx"/>
+                        <outlet property="euTitleLabel" destination="IaK-Dw-uOc" id="Nbj-BC-OmL"/>
+                        <outlet property="eurosLabel" destination="JeI-0f-TU6" id="31G-py-8xl"/>
+                        <outlet property="frTitleLabel" destination="Ms2-hE-07k" id="QAu-g2-Bqz"/>
+                        <outlet property="francsLabel" destination="Ekl-jU-hzr" id="rIf-bJ-KOT"/>
+                        <outlet property="usdLabel" destination="ba5-Hb-t2F" id="lyK-XX-YFj"/>
+                        <outlet property="yuTitleLabel" destination="4MO-YW-Gdc" id="xcN-QR-anz"/>
+                        <outlet property="yuanLabel" destination="EwV-b1-baG" id="DkK-kv-lYY"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zqf-bF-XJr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
